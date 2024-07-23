@@ -110,13 +110,13 @@ signUp.forEach(function(signup){
     closeSidebar()
   });
 })
-sigIn.forEach(function(signin){
-  signin.addEventListener('click', function(e){
-    e.preventDefault();
-    openModal('signIn');
-    closeSidebar()
-  });
-})
+// sigIn.forEach(function(signin){
+//   signin.addEventListener('click', function(e){
+//     e.preventDefault();
+//     openModal('signIn');
+//     closeSidebar()
+//   });
+// })
 
 
 
@@ -206,73 +206,73 @@ registerUser();
 
 
 
-const loginUser = async function() {
-  btnLoginUser.addEventListener("click", async function() {
-    const areInputsValid = userInputs([userLoginEmail, userLoginPassword]);
-    const isEmailValidFlag = isEmailValid(userLoginEmail);
+// const loginUser = async function() {
+//   btnLoginUser.addEventListener("click", async function() {
+//     const areInputsValid = userInputs([userLoginEmail, userLoginPassword]);
+//     const isEmailValidFlag = isEmailValid(userLoginEmail);
 
-    if (!areInputsValid) {
-      messageSignIn.innerHTML = "Please fill out all fields.";
-      messageSignIn.style.color = "red";
-      messageSignIn.style.fontSize = "1.5rem";
-    } else if (!isEmailValidFlag) {
-      messageSignIn.innerHTML = "Please input a valid email.";
-      messageSignIn.style.color = "red";
-      messageSignIn.style.fontSize = "1.5rem";
-    } else {
-      if (!navigator.onLine) {
-        messageSignIn.innerHTML = "No internet connection. Please check your connection and try again.";
-        messageSignIn.style.color = "red";
-        messageSignIn.style.fontSize = "1.5rem";
-        return;
-      }
+//     if (!areInputsValid) {
+//       messageSignIn.innerHTML = "Please fill out all fields.";
+//       messageSignIn.style.color = "red";
+//       messageSignIn.style.fontSize = "1.5rem";
+//     } else if (!isEmailValidFlag) {
+//       messageSignIn.innerHTML = "Please input a valid email.";
+//       messageSignIn.style.color = "red";
+//       messageSignIn.style.fontSize = "1.5rem";
+//     } else {
+//       if (!navigator.onLine) {
+//         messageSignIn.innerHTML = "No internet connection. Please check your connection and try again.";
+//         messageSignIn.style.color = "red";
+//         messageSignIn.style.fontSize = "1.5rem";
+//         return;
+//       }
 
-      try {
-        messageSignIn.innerHTML = "Please wait..........";
-        messageSignIn.style.color = "white";
-        messageSignIn.style.fontSize = "1.5rem";
+//       try {
+//         messageSignIn.innerHTML = "Please wait..........";
+//         messageSignIn.style.color = "white";
+//         messageSignIn.style.fontSize = "1.5rem";
 
-        const docsnap = await getDocs(dbRef);
-        let userFound = false;
+//         const docsnap = await getDocs(dbRef);
+//         let userFound = false;
 
-        docsnap.forEach(function(doc) {
-          const userData = doc.data();
-          if (userData.email === userLoginEmail.value) {
-            userFound = true;
-            if (userData.password === userLoginPassword.value) {
-              messageSignIn.innerHTML = "Login successful.";
-              messageSignIn.style.color = "green";
-              messageSignIn.style.fontSize = "1.5rem";
-              setTimeout(function() {
-                closeModal('signIn');
-                messageSignIn.innerHTML = '';
-                userLoginEmail.value = '';
-                userLoginPassword.value = '';
-              }, 2000);
-            } else {
-              messageSignIn.innerHTML = "Incorrect password.";
-              messageSignIn.style.color = "red";
-              messageSignIn.style.fontSize = "1.5rem";
-            }
-          }
-        });
+//         docsnap.forEach(function(doc) {
+//           const userData = doc.data();
+//           if (userData.email === userLoginEmail.value) {
+//             userFound = true;
+//             if (userData.password === userLoginPassword.value) {
+//               messageSignIn.innerHTML = "Login successful.";
+//               messageSignIn.style.color = "green";
+//               messageSignIn.style.fontSize = "1.5rem";
+//               setTimeout(function() {
+//                 closeModal('signIn');
+//                 messageSignIn.innerHTML = '';
+//                 userLoginEmail.value = '';
+//                 userLoginPassword.value = '';
+//               }, 2000);
+//             } else {
+//               messageSignIn.innerHTML = "Incorrect password.";
+//               messageSignIn.style.color = "red";
+//               messageSignIn.style.fontSize = "1.5rem";
+//             }
+//           }
+//         });
 
-        if (!userFound) {
-          messageSignIn.innerHTML = "There is no account associated with this email.";
-          messageSignIn.style.color = "red";
-          messageSignIn.style.fontSize = "1.5rem";
-        }
-      } catch (error) {
-        messageSignIn.innerHTML = "Error logging in. Please check your internet connection.";
-        messageSignIn.style.color = "red";
-        messageSignIn.style.fontSize = "1.5rem";
-        console.log(error);
-      }
-    }
-  });
-};
+//         if (!userFound) {
+//           messageSignIn.innerHTML = "There is no account associated with this email.";
+//           messageSignIn.style.color = "red";
+//           messageSignIn.style.fontSize = "1.5rem";
+//         }
+//       } catch (error) {
+//         messageSignIn.innerHTML = "Error logging in. Please check your internet connection.";
+//         messageSignIn.style.color = "red";
+//         messageSignIn.style.fontSize = "1.5rem";
+//         console.log(error);
+//       }
+//     }
+//   });
+// };
 
-loginUser();
+// loginUser();
 
 
 

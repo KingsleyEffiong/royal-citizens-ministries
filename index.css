@@ -830,7 +830,7 @@
 }
   @media screen and (max-width: 600px) {
     .header {
-      height: 60vh;
+      height: 68vh;
     }
     .modal{
       max-width: 36rem;
