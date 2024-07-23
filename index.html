@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="icons-1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Royal Citizens Ministeries</title>
+</head>
+<body>
+  <div class="modal hidden" id="signUp">
+    <button class="btn--close-modal" id="close--modal">&times;</button>
+    <h2 class="modal__header">
+      Sign up  <br />
+      to our newsletter.
+    </h2>
+    <form class="modal__form">
+      <div class="email--flexs">
+      <label>First Name</label>
+      <input type="text"  id="first--name"/>
+      </div>
+      <div class="email--flexs">
+      <label>Last Name</label>
+      <input type="text"  id="last--name"/>
+      </div>
+      <div class="email--flexs">
+      <label>Email Address</label>
+      <input type="email"  id="email--address"/>
+      </div>
+      <div class="email--flexs">
+        <label>Password</label>
+        <input type="password"  id="password"/>
+        <i class="bi bi-eye-fill"></i>
+        <i class="bi bi-eye-slash-fill"></i>
+        </div>
+      <div class="email--flexs">
+      <label>Confirm password</label>
+      <input type="password"  id="cpassword"/>
+      <i class="bi bi-eye-fill" id="show--eyes"></i>
+      <i class="bi bi-eye-slash-fill" id="show-slash--eyes"></i>
+      </div>
+      <p id="message--sign--up"></p>
+      <button class="btn" id="register--user" type="button">Submit &rarr;</button>
+    </form>
+  </div>
+
+  <div class="modal hidden" id="signIn">
+    <button class="btn--close-modal" id="close--modal">&times;</button>
+    <h2 class="modal__header">
+      Sign In
+    </h2>
+    <form class="modal__form">
+      <div class="email--flexs">
+      <label>Email Address</label>
+      <input type="email"  id="user-login-email"/>
+      </div>
+      <div class="email--flexs">
+        <label>Password</label>
+        <input type="password"  id="user-login-password"/>
+        <i class="bi bi-eye-fill"></i>
+        <i class="bi bi-eye-slash-fill"></i>
+        </div>
+      <p id="message--sign--in"></p>
+      <button class="btn" id="login-user" type="button">Submit &rarr;</button>
+    </form>
+  </div>
+  <div class="overlay hidden"></div>
+    <div class="scroll scroll--hidden">&UpArrow;</div>
+    <header class="header" id="head">
+        <nav class="nav">
+          <img
+            src="images/Royal citizens ministering logo.jpg"
+            alt="Royal Citizens logo"
+            class="nav__logo"
+            id="logo"
+            data-version-number="3.0"
+          />
+          <ul class="nav__links">
+            <li class="nav__item">
+              <a class="nav__link" href="#section--1">About</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="#section--2">Livestream</a>
+              </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#section--3">Sermon videos</a>
+            </li>
+          
+            <li class="nav__item">
+              <a class="nav__link" href="" id="sign--up">Sign up</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="" id="sign--in">Sign in</a>
+            </li>
+            <!-- <li class="nav__item">
+              <a class="nav__link nav__link--btn btn--show-modal" href="#"
+                >Donate</a
+              >
+            </li> -->
+          </ul>
+          <ul class="nav__responsive">
+            <li class="nav__item">
+              <a class="nav__link" href="#section--1">About</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="#section--2">Livestream</a>
+              </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#section--3">Sermon videos</a>
+            </li>
+          
+            <li class="nav__item">
+              <a class="nav__link" href="#" id="sign--up">Sign up</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#" id="sign--in">Sign in</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="" id="close--menu">Close Menu</a>
+            </li>
+          </ul>
+          <i class="bi bi-justify-left toggle--icon"  class="nav__item"></i>
+        </nav> 
+      
+  
+        <div class="header__title">
+          <h1>
+            We
+            <!-- Green highlight effect -->
+            <span class="">Welcome</span> you 
+            to<br />
+            <span class="">Church</span>
+          </h1>
+          <h4>Royalty is our Place, our Portion, our Inheritance</h4>
+          <button class="btn--text btn--scroll-to" id="latestSermon"><i class="bi bi-youtube"></i> Watch our latest sermon &DownArrow;</button>
+          <button class="btn--text btn--scroll-to" id="livestream"><i class="bi bi-broadcast"></i> Join us live &DownArrow;</button>
+          <!-- <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button> -->
+        </div>
+      </header>
+
+      <section class="section" id="section--1">
+        <!-- <div class="section__title">
+          <h3 class="section__header">
+            About the church
+          </h3>
+        </div> -->
+  
+        <div class="features">
+          <img
+            src="images/gift-habeshaw-P9c2JS_UNDI-unsplash.jpg"
+            data-src="images/gift-habeshaw-P9c2JS_UNDI-unsplash.jpg"
+            alt="Computer"
+            class="features__img lazy-img"
+          />
+          <div class="features__feature">
+            <div class="features__icon">
+              <svg>
+                <use xlink:href="img/icons.svg#icon-monitor"></use>
+              </svg>
+            </div>
+            <h5 class="features__header">Lorem ipsum dolor sit amet consectetur</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde alias
+              sint quos? Accusantium a fugiat porro reiciendis saepe quibusdam
+              debitis ducimus.
+            </p>
+          </div>
+  
+          <div class="features__feature">
+            <div class="features__icon">
+              <svg>
+                <use xlink:href="img/icons.svg#icon-trending-up"></use>
+              </svg>
+            </div>
+            <h5 class="features__header">Lorem, ipsum dolor sit amet.</h5>
+            <p>
+              Nesciunt quos autem dolorum voluptates cum dolores dicta fuga
+              inventore ab? Nulla incidunt eius numquam sequi iste pariatur
+              quibusdam!
+            </p>
+          </div>
+          <img
+            src="images/jasmin-ne-9unwg59Jxng-unsplash.jpg"
+            data-src="images/jasmin-ne-9unwg59Jxng-unsplash.jpg"
+            alt="Plant"
+            class="features__img lazy-img"
+          />
+  
+          <img
+            src="images/john-price-RAZQiZOX3mU-unsplash.jpg"
+            data-src="images/john-price-RAZQiZOX3mU-unsplash.jpg"
+            alt="Credit card"
+            class="features__img lazy-img"
+          />
+          <div class="features__feature">
+            <div class="features__icon">
+              <svg>
+                <use xlink:href="img/icons.svg#icon-credit-card"></use>
+              </svg>
+            </div>
+            <h5 class="features__header">Lorem ipsum dolor sit amet</h5>
+            <p>
+              Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim
+              eveniet consequatur odit quam quos possimus assumenda dicta fuga
+              inventore ab.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="section--2">
+        <div class="section--flex">
+                <h2 class="section__description" id="live--stream--text"></h2>
+                <h4>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere doloribus repudiandae unde consequuntur, nemo esse magni labore debitis, et veniam optio impedit similique delectus saepe distinctio quas ut laudantium ratione.
+                </h4>
+                <!-- <button class="btn--text btn--scroll-to"><i class="bi bi-broadcast"></i> Start Streaming</button> -->
+            </div>
+            <div class="video-container" id="live-stream"></div>
+      </section>
+      <section class="section" id="section--3">
+        <div class="section__title section__title--testimonials">
+          <div class="section__title">
+            <h3 class="section__header">
+              CHURCH SERMONS
+            </h3>
+          </div>
+          <h2>Past Videos</h2>
+          <div class="videos" id="past-videos"></div>
+      </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <img src="images/Royal citizens ministering logo.jpg" alt="Logo" class="footer__logo" />
+        <p class="footer__copyright">
+          &copy; Copyright by
+          <a
+            class="footer__link twitter-link"
+            target="_blank"
+            href="https://twitter.com/jonasschmedtman"
+            >@royalcitizensministeries</a
+          >.
+        </p>
+      </footer>
+      <script src="app.js"  type="module"></script>
+      <script  src="index.js" type="module"></script>
+</body>
+</html>
