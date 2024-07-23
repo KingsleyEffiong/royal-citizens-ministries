@@ -4,6 +4,7 @@ const dbRef = collection(db, "userInfo");
 
 
 const btnLatestSermon = document.querySelector('#latestSermon');
+console.log(btnLatestSermon)
 const btnLivestream = document.querySelector('#livestream');
 const LatestSermon = document.querySelector('#section--3');
 const liveStreaming = document.querySelector('#section--2');
@@ -22,9 +23,9 @@ let btnRegisterUser = document.getElementById('register--user');
 let btnLoginUser = document.getElementById('login-user');
 let messageSignUp = document.getElementById('message--sign--up');
 let messageSignIn = document.getElementById('message--sign--in');
-const signUp = document.getElementById('sign--up');
+const signUp = document.querySelectorAll('#sign--up');
 const btncloseModal = document.querySelectorAll('#close--modal');
-const sigIn = document.getElementById('sign--in');
+const sigIn = document.querySelectorAll('#sign--in');
 let userLoginEmail = document.getElementById('user-login-email');
 let userLoginPassword = document.getElementById('user-login-password');
 
@@ -102,15 +103,22 @@ const closeModal = function (modalId) {
   overlay.classList.add('hidden');
 };
 
+signUp.forEach(function(signup){
+  signup.addEventListener('click', function(e){
+    e.preventDefault();
+    openModal('signUp');
+    closeSidebar()
+  });
+})
+sigIn.forEach(function(signin){
+  signin.addEventListener('click', function(e){
+    e.preventDefault();
+    openModal('signIn');
+    closeSidebar()
+  });
+})
 
-signUp.addEventListener('click', function(e){
-  e.preventDefault();
-  openModal('signUp');
-});
-sigIn.addEventListener('click', function(e){
-  e.preventDefault();
-  openModal('signIn');
-});
+
 
 for(const modal of btncloseModal){
   modal.addEventListener('click', function(e){
