@@ -173,11 +173,12 @@
   .nav__links {
     display: flex;
     align-items: center;
+    text-decoration: none;
     list-style: none;
   }
   
   .nav__responsive {
-    background: red;
+    background: #fa691d;
     position: fixed;
     width: 100%;
     top: 0;
@@ -185,13 +186,15 @@
     height: auto;
     list-style: none;;
     display: none;
+    padding: 2rem;
     flex-direction: column;
   }
   .nav__responsive .nav__item{
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
   .nav__item {
     margin-left: 4rem;
+    text-decoration: none;
   }
   
   .nav__link:link,
@@ -199,7 +202,7 @@
     font-size: 1.7rem;
     color: #fff;
     font-weight: 400;
-    /* text-decoration: none; */
+    text-decoration: none;
     display: block;
     transition: all 0.3s;
   }
@@ -432,7 +435,7 @@
     display: flex;
     width: 100%;
     height: auto;
-    flex-wrap: wrap;
+    overflow: auto;
 }
 .video{
     margin: 1rem 0.5rem;

@@ -148,7 +148,7 @@ function isEmailValid(emailInput) {
 
 const registerUser = async function() {
   btnRegisterUser.addEventListener('click', async function() {
-    const areInputsValid = userInputs([userFirstName, userLastName, userEmail, userPassword, userConfirmedPassword]);
+    const areInputsValid = userInputs([userFirstName, userLastName, userEmail]);
     const isEmailValidFlag = isEmailValid(userEmail);
 
     if (!areInputsValid) {
@@ -174,9 +174,8 @@ const registerUser = async function() {
           firstName: userFirstName.value,
           lastName: userLastName.value,
           email: userEmail.value,
-          password: userPassword.value,
         });
-        messageSignUp.innerHTML = "User registered successfully.";
+        messageSignUp.innerHTML = "Thank you for subcribing to our platform";
         messageSignUp.style.color = "green";
         messageSignUp.style.fontSize = "1.5rem";
       
@@ -185,9 +184,7 @@ const registerUser = async function() {
           messageSignUp.innerHTML = "";
           userFirstName.value = "",
           userLastName.value = "",
-          userConfirmedPassword.value = "",
-          userEmail.value = "",
-          userPassword.value = ""
+          userEmail.value = ""
         },2000)
       } catch (error) {
         console.error("Error adding document: ", error);
@@ -363,8 +360,8 @@ imgTarget.forEach(img => imgObserver.observe(img));
 
 
 
-const API_KEY = 'AIzaSyC4r98u1CX6XzzOVezT1iEnGkyIg3mJzaY';
-const CHANNEL_ID = 'UCuNDY-MatvVCSYe2TjpKbmQ';
+const API_KEY = 'AIzaSyBn7i4T_UtbPB336AAbAW1fSCNufCoJ_yM';
+const CHANNEL_ID = 'UCwuvaFGOGIwsNDLNeWsAIJw';
 
 // Fetch the live stream
 

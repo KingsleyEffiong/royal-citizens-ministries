@@ -12,21 +12,22 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/fireba
 
 const firebaseConfig = {
 
-  apiKey: "AIzaSyDRDo-m0Lsd5hbdfYMywlc3WUbUtT-bwLY",
+  apiKey: "AIzaSyA0h7oXXRVr4VAY5TJAIoq8O-gdXh25xq0",
 
-  authDomain: "church-website-fffe9.firebaseapp.com",
+  authDomain: "royal-citizens--ministries.firebaseapp.com",
 
-  projectId: "church-website-fffe9",
+  projectId: "royal-citizens--ministries",
 
-  storageBucket: "church-website-fffe9.appspot.com",
+  storageBucket: "royal-citizens--ministries.appspot.com",
 
-  messagingSenderId: "317957225784",
+  messagingSenderId: "378512507801",
 
-  appId: "1:317957225784:web:38ee216b186dfb66d755cd",
+  appId: "1:378512507801:web:3a5b8606857b6c8e440908",
 
-  measurementId: "G-TH3KBDVN1Z"
+  measurementId: "G-L2WK5GH6W0"
 
 };
+
 
 
 // Initialize Firebase
